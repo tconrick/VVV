@@ -12,7 +12,7 @@ Icon\r\r
 # This is a file intended for hooking in a custom Vagrant configuration on up
 /Customfile
 /vvv-custom.yml
-/config/config.yml
+# /config/config.yml
 
 # Allow for custom provisioning scripts that are not included with the repo
 /provision/provision-custom.sh
@@ -30,10 +30,10 @@ Icon\r\r
 /config/homebin/vagrant_destroy_custom
 
 # No need to share individual site configs with each other
-/config/nginx-config/sites/*.conf
+# /config/nginx-config/sites/*.conf
 
 # Ignore anything in the 'custom' directory in config
-/config/custom/*
+# /config/custom/*
 
 # Ignore the nvm git clone in the 'nvm' directory in config
 /config/nvm/
@@ -48,14 +48,16 @@ Icon\r\r
 /config/tideways.json
 
 # No need to share our mysql data with each other
-/database/data/*
+# /database/data/*
 
 # Log files should be ignored.
 /log/*
 !/log/README.md
 
 # No need to share our individual sites with each other
-/www/*
+/www/default
+/www/wordpress-one
+/www/wordpress-two
 
 # And no need to share individual SQL files with each other
 *.sql
@@ -74,5 +76,5 @@ Icon\r\r
 !/www/vvv-hosts
 
 # But not the custom phpMyAdmin config in the database-admin directory.
-/www/default/database-admin/config.inc.custom.php
-/certificates
+# /www/default/database-admin/config.inc.custom.php
+# /certificates
